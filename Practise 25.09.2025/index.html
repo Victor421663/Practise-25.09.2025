@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Locuri fascinante din toata lumea</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Locuri fascinante din toata lumea</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Pagina principala</a></li>
-        <li><a href="cuprins.html">Cuprins</a></li>
-        <li><a href="descriere.html">Descriere</a></li>
-        <li><a href="scop.html">Scop si obiective</a></li>
-        <li><a href="functii.html">Functii cheie</a></li>
-        <li><a href="culori.html">Culori</a></li>
-        <li><a href="structura.html">Structura</a></li>
-        <li><a href="concluzii.html">Concluzii</a></li>
-      </ul>
-    </nav>
+    <div class="banner">
+      <img src="https://i.imgur.com/hrS9VAE.jpeg" alt="Peizajul frumos" class="banner-img">
+      <div class="banner-content">
+        <h1>Locuri fascinante din toata lumea</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Pagina principala</a></li>
+            <li><a href="cuprins.html">Cuprins</a></li>
+            <li><a href="descriere.html">Descriere</a></li>
+            <li><a href="scop.html">Scop si obiective</a></li>
+            <li><a href="functii.html">Functii cheie</a></li>
+            <li><a href="culori.html">Culori</a></li>
+            <li><a href="structura.html">Structura</a></li>
+            <li><a href="concluzii.html">Concluzii</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -28,10 +34,39 @@
       <p>Acest site prezinta locuri fascinante din intreaga lume. Veti gasi informatii despre cultura, natura si atractii turistice unice.</p>
       <p>Scopul este de a inspira si educa vizitatorii despre frumusetea planetei noastre.</p>
     </section>
+
+    <section id="map">
+      <h2>Explorează harta lumii</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200567.75405367027!2d27.8974!3d47.7461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c13a1e7a4fbb73%3A0x93f5cd26b1c78b1c!2sBălți%2C+Moldova!5e0!3m2!1sen!2sro!4v1642138267060!5m2!1sen!2sro" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <section>
+      <h2>Calculatoare de Costuri</h2>
+      <input type="number" id="days" placeholder="Câte zile" />
+      <input type="number" id="dailyCost" placeholder="Cost pe zi" />
+      <button onclick="calculateCost()">Calculează</button>
+      <p id="totalCost">Cost total: </p>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 Proiect Locuri Fascinante</p>
   </footer>
+
+  <script>
+    function calculateCost() {
+      const days = document.getElementById('days').value;
+      const dailyCost = document.getElementById('dailyCost').value;
+      const totalCost = days * dailyCost;
+      document.getElementById('totalCost').innerText = `Cost total: ${totalCost} lei`;
+    }
+  </script>
 </body>
 </html>
