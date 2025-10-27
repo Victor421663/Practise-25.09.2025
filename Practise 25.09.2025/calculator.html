@@ -32,6 +32,15 @@
     </section>
   </main>
 
+  <script>
+    function calculateCost() {
+  const days = Number(document.getElementById('days').value);
+  const dailyCost = Number(document.getElementById('dailyCost').value);
+  const totalCost = days * dailyCost;
+  document.getElementById('totalCost').innerText = `Cost total: ${totalCost} lei`;
+}
+  </script>
+
   <footer>
     <p>© 2025 Proiect Locuri Fascinante</p>
   </footer>

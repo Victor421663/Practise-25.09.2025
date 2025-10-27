@@ -47,25 +47,25 @@
       </iframe>
     </section>
 
-  <section class="rubrici">
+  <section class="content-section">
   <h2>Explorează principalele categorii</h2>
-  <div class="rubrici-container">
+  <div class="section-container">
 
-    <div class="rubrica">
+    <div class="section">
       <img src="https://i.imgur.com/jsmDUQ7.jpeg" alt="Natura">
       <h3>Natura</h3>
       <p>Peisaje spectaculoase și minuni naturale.</p>
       <a href="natura.html">Vezi mai mult</a>
     </div>
 
-    <div class="rubrica">
+    <div class="section">
       <img src="https://i.imgur.com/s4s2sJQ.jpeg" alt="Cultură">
       <h3>Cultură</h3>
       <p>Tradiții, obiceiuri și diversitate culturală.</p>
       <a href="cultura.html">Descoperă</a>
     </div>
 
-    <div class="rubrica">
+    <div class="section">
       <img src="https://i.imgur.com/Whi5o7p.jpeg" alt="Atracții turistice">
       <h3>Atracții turistice</h3>
       <p>Locuri unice de vizitat din toată lumea.</p>
@@ -81,11 +81,12 @@
 
   <script>
     function calculateCost() {
-      const days = document.getElementById('days').value;
-      const dailyCost = document.getElementById('dailyCost').value;
-      const totalCost = days * dailyCost;
-      document.getElementById('totalCost').innerText = `Cost total: ${totalCost} lei`;
-    }
+  const days = Number(document.getElementById('days').value);
+  const dailyCost = Number(document.getElementById('dailyCost').value);
+  const totalCost = days * dailyCost;
+  document.getElementById('totalCost').innerText = `Cost total: ${totalCost} lei`;
+}
   </script>
+  
 </body>
 </html>
