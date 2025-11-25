@@ -272,3 +272,22 @@ button:hover {
   background-color: #005f87;
 }
 
+.gallery {
+  display: grid;
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 1200px; 
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
